@@ -6,6 +6,27 @@
     "config_munge": {
         "files": {}
     },
-    "installed_plugins": {},
-    "dependent_plugins": {}
+    "installed_plugins": {
+        "cordova-plugin-extension": {
+            "PACKAGE_NAME": "io.cybertek.taptapcat"
+        },
+        "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "io.cybertek.taptapcat"
+        }
+    },
+    "dependent_plugins": {},
+    "modules": [
+        {
+            "file": "plugins/cordova-plugin-admobpro/www/AdMob.js",
+            "id": "cordova-plugin-admobpro.AdMob",
+            "pluginId": "cordova-plugin-admobpro",
+            "clobbers": [
+                "window.AdMob"
+            ]
+        }
+    ],
+    "plugin_metadata": {
+        "cordova-plugin-extension": "1.5.1",
+        "cordova-plugin-admobpro": "2.28.3"
+    }
 }
