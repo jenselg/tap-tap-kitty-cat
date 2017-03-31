@@ -3,9 +3,45 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
+        <title>Tap Tap Cat</title>
     </head>
     <body>
+    	<!-- GLOBAL -->
         <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/phaser.min.js"></script>
+
+        <!-- GAME RELATED -->
+        <script type="text/javascript" src="js/boot.js"></script>
+	    <script type="text/javascript" src="js/preload.js"></script>
+	    <script type="text/javascript" src="js/mainscreen.js"></script>
+	    <script type="text/javascript" src="js/startgame.js"></script>
+	    <script type="text/javascript" src="js/gameover.js"></script>
+	    <script type="text/javascript" src="js/highscore.js"></script>
+	    <script type="text/javascript" src="js/howto.js"></script>
+
+	    <style>
+		    body {
+			    padding: 0;
+			    margin: 0;
+			    background: black;
+			}
+	    </style>
+
+	    <!-- INITIALIZE GAME -->
+        <script type="text/javascript">
+	        (function(){
+	            //var game = new Phaser.Game(window.innerWidth * window.devicePixelRatio, window.innerHeight * window.devicePixelRatio, Phaser.CANVAS, 'game');
+	            var game = new Phaser.Game(320, 480, Phaser.AUTO, "game");
+	            game.state.add("Boot", boot);
+	            game.state.add("Preload", preload);
+	            game.state.add("MainScreen", mainScreen);
+	            game.state.add("StartGame", startGame);
+	            game.state.add("GameOver", gameOver);
+	            game.state.add("HighScore", highScore);
+	            game.state.add("HowTo", howTo);
+	            game.state.start("Boot");
+	        })();
+   		</script>
     </body>
 </html>
