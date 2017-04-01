@@ -26,6 +26,9 @@ preload.prototype = {
         this.game.load.image('spikewall-top', 'assets/spritesheets/spikewall-top.png');
         this.game.load.image('spikewall-left', 'assets/spritesheets/spikewall-left.png');
         this.game.load.image('spikewall-right', 'assets/spritesheets/spikewall-right.png');
+
+        // COINS
+        this.game.load.spritesheet('coin', 'assets/spritesheets/coin.png', 16, 16);
         
         
         // OINK SOUND

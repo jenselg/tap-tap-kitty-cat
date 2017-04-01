@@ -33,6 +33,11 @@ startGame.prototype = {
         torch2.animations.add('flame');
         torch2.animations.play('flame', 10, true);
         
+        // Load coin
+        coin = this.game.add.sprite(this.game.world.randomX, 150, 'coin');
+        coin.animations.add('spin');
+        coin.animations.play('spin', 10, true);
+        this.game.physics.arcade.enable(coin);
         // Load score text
         count = 0;
         score = this.game.add.bitmapText(
@@ -80,13 +85,23 @@ startGame.prototype = {
     
     updateScore: function(){
         oink.play();
-        count = count + 0.1;
+        if (count > 0) {
+            countTmp = count - 0.1;
+            count = Math.round(countTmp *10)/10;
+        }
         score.setText(count);
     },
     
     update: function(){
         
         this.game.input.onDown.addOnce(this.updateScore, this);
+
+        if(this.game.physics.arcade.collide(coin, pig)) {
+            count = count + 1;
+            score.setText(count);
+            coin.kill();
+            coin.reset(this.game.world.randomX, 150);
+        }
         
         if(this.game.physics.arcade.collide(spikewallBottom, pig) || /*this.game.physics.arcade.collide(spikewallLeft, pig) || this.game.physics.arcade.collide(spikewallRight, pig) ||*/ this.game.physics.arcade.collide(spikewallTop, pig)) {
             die.play();
