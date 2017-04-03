@@ -10,4 +10,3 @@
     <content src="index.html" />
     <access origin="*" />
 </widget>
-<preference name="orientation" value="portrait" />
