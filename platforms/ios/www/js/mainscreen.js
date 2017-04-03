@@ -4,7 +4,14 @@ mainScreen.prototype = {
 
     create: function(){
 
-        bg = this.game.add.image(0, 0, 'background')
+        // GFX
+        bg = this.game.add.image(0, 0, 'background');
+        //evilCloud = this.game.add.sprite(0, 0, 'evilcloud');
+        //evilCloud.animations.add('float');
+        //evilCloud.animations.play('float', 2, true);
+
+        //brickSpike = this.game.add.sprite(0, this.game.world.height - 32, 'brickspike');
+
         // Load text banner
         banner = this.game.add.bitmapText(
             this.game.world.centerX, 
@@ -24,10 +31,11 @@ mainScreen.prototype = {
         );
         banner2.anchor.setTo(0.5, 0.5);
         
-        // Load pig
-        pig = this.game.add.sprite(143, 220, 'pig');
-        pig.animations.add('bounce');
-        pig.animations.play('bounce', 10, true);
+        // Load cat
+        cat = this.game.add.sprite(this.game.world.centerX, 230, 'cat');
+        cat.anchor.setTo(0.5, 0.5);
+        cat.animations.add('bounce');
+        cat.animations.play('bounce', 10, true);
         
         // Load buttons
 

@@ -2,11 +2,12 @@
 <widget id="io.cybertek.taptapcat" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tap Tap Cat</name>
     <description>
-        A blank PhoneGap app.
+        Help the cat collect the coins, while avoiding the dangerous spikes and the evil cloud!
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="support@cybertek.io" href="http://cybertek.io">
+        Cybertek Systems LLC
     </author>
     <content src="index.html" />
     <access origin="*" />
 </widget>
+<preference name="orientation" value="portrait" />
