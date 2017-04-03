@@ -13,4 +13,7 @@
     <platform name="android">
         <icon src="res/caticon.png" />
     </platform>
+    <plugin name="cordova-plugin-admobpro" spec="~2.28.3" />
+    <plugin name="cordova-plugin-device" spec="~1.1.5" />
+    <plugin name="com.darktalker.cordova.screenshot" spec="https://github.com/gitawego/cordova-screenshot.git" />
 </widget>
