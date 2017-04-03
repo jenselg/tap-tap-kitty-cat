@@ -21,6 +21,10 @@
                         {
                             "xml": "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\" />",
                             "count": 1
+                        },
+                        {
+                            "xml": "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\" />",
+                            "count": 1
                         }
                     ]
                 }
@@ -31,6 +35,14 @@
                         {
                             "xml": "<feature name=\"AdMob\"><param name=\"android-package\" value=\"com.rjfun.cordova.admob.AdMobPlugin\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Device\"><param name=\"android-package\" value=\"org.apache.cordova.device.Device\" /></feature>",
+                            "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Screenshot\"><param name=\"android-package\" value=\"com.darktalker.cordova.screenshot.Screenshot\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -39,10 +51,16 @@
     },
     "installed_plugins": {
         "cordova-plugin-extension": {
-            "PACKAGE_NAME": "io.cybertek.taptapcat"
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         },
         "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "io.cybertek.taptapcat"
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
+        "com.darktalker.cordova.screenshot": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         }
     },
     "dependent_plugins": {},
@@ -54,10 +72,28 @@
             "clobbers": [
                 "window.AdMob"
             ]
+        },
+        {
+            "id": "cordova-plugin-device.device",
+            "file": "plugins/cordova-plugin-device/www/device.js",
+            "pluginId": "cordova-plugin-device",
+            "clobbers": [
+                "device"
+            ]
+        },
+        {
+            "id": "com.darktalker.cordova.screenshot.screenshot",
+            "file": "plugins/com.darktalker.cordova.screenshot/www/Screenshot.js",
+            "pluginId": "com.darktalker.cordova.screenshot",
+            "merges": [
+                "navigator.screenshot"
+            ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-extension": "1.5.1",
-        "cordova-plugin-admobpro": "2.28.3"
+        "cordova-plugin-admobpro": "2.28.3",
+        "cordova-plugin-device": "1.1.5",
+        "com.darktalker.cordova.screenshot": "0.1.5"
     }
 }

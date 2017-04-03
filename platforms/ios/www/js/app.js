@@ -1,11 +1,5 @@
-var admobid = {
-    banner: 'ca-app-pub-3614469044994240/2813887539',
-    interstitial: 'ca-app-pub-3614469044994240/2342882738'
-}
-
 function initAdMob(){
-    if(AdMob){
-    
+    if(AdMob && device.platform != 'browser'){
         AdMob.createBanner({
             adId: admobid.banner,
             position: AdMob.AD_POSITION.BOTTOM_CENTER,
@@ -16,9 +10,22 @@ function initAdMob(){
 }
 
 function allIsGood() {
-    if(navigator.splashscreen) {   // Cordova API detected
+    if(navigator.splashscreen) {
         navigator.splashscreen.hide();
     }
+
+    if (device.platform == "Android") {
+        admobid = {
+            banner: 'ca-app-pub-8133264651158274/9632619748',
+            interstitial: 'ca-app-pub-8133264651158274/3306884540'
+        }
+    } else if (device.platform == "iOS") {
+        admobid = {
+            banner: 'ca-app-pub-8133264651158274/7737084141',
+            interstitial: 'ca-app-pub-8133264651158274/1690550541'
+        }
+    }
+
     initAdMob(); 
 }
 

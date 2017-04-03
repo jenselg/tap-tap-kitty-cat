@@ -8,12 +8,18 @@
     },
     "installed_plugins": {
         "cordova-plugin-admobpro": {
-            "PACKAGE_NAME": "io.cybertek.taptapcat"
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
+        "com.darktalker.cordova.screenshot": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         }
     },
     "dependent_plugins": {
         "cordova-plugin-extension": {
-            "PACKAGE_NAME": "io.cybertek.taptapcat"
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         }
     }
 }

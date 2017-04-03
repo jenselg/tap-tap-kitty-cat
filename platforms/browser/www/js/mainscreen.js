@@ -6,11 +6,6 @@ mainScreen.prototype = {
 
         // GFX
         bg = this.game.add.image(0, 0, 'background');
-        //evilCloud = this.game.add.sprite(0, 0, 'evilcloud');
-        //evilCloud.animations.add('float');
-        //evilCloud.animations.play('float', 2, true);
-
-        //brickSpike = this.game.add.sprite(0, this.game.world.height - 32, 'brickspike');
 
         // Load text banner
         banner = this.game.add.bitmapText(
@@ -18,7 +13,7 @@ mainScreen.prototype = {
             96,
             '04b-orange',
             'Tap Tap',
-            45 
+            40 
         );
         banner.anchor.setTo(0.5, 0.5);
 
@@ -26,8 +21,8 @@ mainScreen.prototype = {
             this.game.world.centerX, 
             150,
             '04b',
-            'Cat',
-            50 
+            'Kitty Cat',
+            40 
         );
         banner2.anchor.setTo(0.5, 0.5);
         

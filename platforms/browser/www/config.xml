@@ -1,12 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cybertek.taptapcat" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="io.cybertek.taptapkittycat" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tap Tap Cat</name>
     <description>
-        A blank PhoneGap app.
+        Help the cat collect the coins, while avoiding the dangerous spikes and the evil cloud!
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <feature name="Device">
+        <param name="browser-package" value="Device" />
+    </feature>
+    <name>Tap Tap Kitty Cat</name>
+    <description>
+        Help the kitty cat collect the coins, while avoiding the dangerous spikes and the evil cloud!
+    </description>
+    <author email="support@cybertek.io" href="http://cybertek.io">
+        Cybertek Systems LLC
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <preference name="Orientation" value="portrait" />
 </widget>

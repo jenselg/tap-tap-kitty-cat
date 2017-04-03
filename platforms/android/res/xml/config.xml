@@ -1,17 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cybertek.taptapcat" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="io.cybertek.taptapkittycat" version="1.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <feature name="AdMob">
         <param name="android-package" value="com.rjfun.cordova.admob.AdMobPlugin" />
         <param name="onload" value="true" />
     </feature>
-    <name>Tap Tap Cat</name>
+    <feature name="Device">
+        <param name="android-package" value="org.apache.cordova.device.Device" />
+    </feature>
+    <feature name="Screenshot">
+        <param name="android-package" value="com.darktalker.cordova.screenshot.Screenshot" />
+    </feature>
+    <name>Tap Tap Kitty Cat</name>
     <description>
-        A blank PhoneGap app.
+        Help the kitty cat collect the coins, while avoiding the dangerous spikes and the evil cloud!
     </description>
-    <author email="support@phonegap.com" href="http://phonegap.com">
-        PhoneGap Team
+    <author email="support@cybertek.io" href="http://cybertek.io">
+        Cybertek Systems LLC
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <icon src="res/caticon.png" />
     <preference name="loglevel" value="DEBUG" />
+    <preference name="Orientation" value="portrait" />
 </widget>

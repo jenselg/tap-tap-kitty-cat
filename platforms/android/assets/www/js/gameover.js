@@ -6,7 +6,6 @@ gameOver.prototype = {
         
         // Load background
         this.game.add.image(0, 0, 'grave')
-        //this.game.add.image(64, 64, 'title');
         
         // Load buttons
         retryButton = this.game.add.bitmapText(
@@ -70,7 +69,7 @@ gameOver.prototype = {
             );
         currentScoreCount.anchor.setTo(0.5, 0.5);
         
-        if(AdMob && Math.random()*100 < 30) {
+        if(AdMob && Math.random()*100 < 45 && device.platform != 'browser') {
             AdMob.showInterstitial();
         }
         

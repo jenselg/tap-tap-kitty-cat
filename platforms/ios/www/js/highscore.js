@@ -21,7 +21,7 @@ highScore.prototype = {
 
         highScoreCount = this.game.add.bitmapText(
                 this.game.world.centerX,
-                200,
+                150,
                 '04b',
                 window.localStorage.getItem('highscore'),
                 60
@@ -31,7 +31,7 @@ highScore.prototype = {
         // Load buttons
         retryButton = this.game.add.bitmapText(
                 this.game.world.centerX,
-                320,
+                236,
                 '04b-orange',
                 "Play!",
                 40
@@ -42,7 +42,7 @@ highScore.prototype = {
         
         mainMenuButton = this.game.add.bitmapText(
                 this.game.world.centerX,
-                370,
+                286,
                 '04b',
                 'Main Menu',
                 30
@@ -50,6 +50,17 @@ highScore.prototype = {
         mainMenuButton.anchor.setTo(0.5, 0.5);
         mainMenuButton.inputEnabled = true;
         mainMenuButton.events.onInputDown.add(this.backToMain, this);
+
+        screenieButton = this.game.add.bitmapText(
+                this.game.world.centerX,
+                336,
+                '04b-orange',
+                'Screenie :)',
+                30
+            );
+        screenieButton.anchor.setTo(0.5, 0.5);
+        screenieButton.inputEnabled = true;
+        screenieButton.events.onInputDown.add(this.screenieDo, this);
         
     },
     
@@ -59,6 +70,10 @@ highScore.prototype = {
     
     backToMain: function() {
         this.game.state.start("MainScreen");
+    },
+
+    screenieDo: function(){
+
     }
     
 }

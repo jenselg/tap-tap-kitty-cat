@@ -1,4 +1,12 @@
 {
+    "cordova-plugin-extension": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-extension"
+        },
+        "is_top_level": false,
+        "variables": {}
+    },
     "cordova-plugin-admobpro": {
         "source": {
             "type": "registry",
@@ -7,12 +15,21 @@
         "is_top_level": true,
         "variables": {}
     },
-    "cordova-plugin-extension": {
+    "cordova-plugin-device": {
         "source": {
             "type": "registry",
-            "id": "cordova-plugin-extension"
+            "id": "cordova-plugin-device"
         },
-        "is_top_level": false,
+        "is_top_level": true,
+        "variables": {}
+    },
+    "com.darktalker.cordova.screenshot": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/gitawego/cordova-screenshot.git",
+            "subdir": "."
+        },
+        "is_top_level": true,
         "variables": {}
     }
 }

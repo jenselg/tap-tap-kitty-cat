@@ -1,6 +1,13 @@
 var startGame = function(game){}
 
 startGame.prototype = {
+
+    interstitialAd: function(){
+        AdMob.prepareInterstitial({
+            adId: admobid.interstitial, 
+            autoShow:false
+        });
+    },
     
     init: function(){
         var oppX = 0;
@@ -9,11 +16,8 @@ startGame.prototype = {
         jump = this.game.add.audio('jump');
         hurt = this.game.add.audio('hurt');
         getcoin = this.game.add.audio('coin');
-        if (AdMob) {
-            AdMob.prepareInterstitial({
-                adId: admobid.interstitial, 
-                autoShow:false
-            });
+        if (AdMob && device.platform != 'browser') {
+            this.interstitialAd();
         }
     },
     
