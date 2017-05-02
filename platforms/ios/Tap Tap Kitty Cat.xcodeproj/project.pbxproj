@@ -5,6 +5,7 @@
 	};
 	objectVersion = 46;
 	objects = {
+
 /* Begin PBXBuildFile section */
 		0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0207DA571B56EA530066E2B4 /* Images.xcassets */; };
 		11E9383E26EE4230BA7EAD48 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D04C48FBFDA40D283488430 /* UIKit.framework */; };
@@ -40,6 +41,7 @@
 		D8E21CDD4AB1496B975995D3 /* CDVViewController+SplashScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 503F58AE5A9448C684E0BA28 /* CDVViewController+SplashScreen.m */; };
 		DC481C20D97841EBB2023DFB /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB5EDDAC0535462C8DCAD972 /* MediaPlayer.framework */; };
 		DF0D48C14FB040B0A9FA997D /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13C42CFA96C5413AB17D0C5A /* OpenGLES.framework */; };
+		E2FE52651EB86A3000D05742 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E2FE52641EB86A3000D05742 /* Default-568h@2x.png */; };
 		F76E16F6FC7A4ACDB4C56F8A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0573489FDECD4983AF7ADBF2 /* Foundation.framework */; };
 		F7F267DF51F6401F916CBBA8 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29F4389384FA4DA794051B3D /* AudioToolbox.framework */; };
 		FBC77C6734224E1EA20A67C5 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EFE2F2D0E1ED474089089074 /* CoreVideo.framework */; };
@@ -115,6 +117,7 @@
 		DE1D9265DA084B8881AE2A11 /* GenericAdPlugin.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = GenericAdPlugin.h; path = "cordova-plugin-extension/GenericAdPlugin.h"; sourceTree = "<group>"; };
 		DFE19CFFE1F54973B43E6AB0 /* AVFoundation.framework */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		E25A4263DCDB44F99989BD53 /* CDVViewController+SplashScreen.h */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.c.h; name = "CDVViewController+SplashScreen.h"; path = "cordova-plugin-splashscreen/CDVViewController+SplashScreen.h"; sourceTree = "<group>"; };
+		E2FE52641EB86A3000D05742 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		EB87FDF31871DA8E0020F90C /* www */ = {isa = PBXFileReference; lastKnownFileType = folder; name = www; path = ../../www; sourceTree = "<group>"; };
 		EB87FDF41871DAF40020F90C /* config.xml */ = {isa = PBXFileReference; lastKnownFileType = text.xml; name = config.xml; path = ../../config.xml; sourceTree = "<group>"; };
 		ED33DF2A687741AEAF9F8254 /* Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
@@ -183,6 +186,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				E2FE52641EB86A3000D05742 /* Default-568h@2x.png */,
 				EB87FDF41871DAF40020F90C /* config.xml */,
 				EB87FDF31871DA8E0020F90C /* www */,
 				EB87FDF11871DA420020F90C /* Staging */,
@@ -329,6 +333,11 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 830;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = S8S6KM22WQ;
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "Tap Tap Kitty Cat" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -368,6 +377,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				302D95F214D2391D003F00A1 /* MainViewController.xib in Resources */,
+				E2FE52651EB86A3000D05742 /* Default-568h@2x.png in Resources */,
 				0207DA581B56EA530066E2B4 /* Images.xcassets in Resources */,
 				6AFF5BF91D6E424B00AB3073 /* CDVLaunchScreen.storyboard in Resources */,
 			);
@@ -429,7 +439,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = S8S6KM22WQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"Tap Tap Kitty Cat/Plugins/cordova-plugin-admobpro\"",
@@ -461,7 +473,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
+				DEVELOPMENT_TEAM = S8S6KM22WQ;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"Tap Tap Kitty Cat/Plugins/cordova-plugin-admobpro\"",
