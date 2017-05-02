@@ -50,17 +50,6 @@ highScore.prototype = {
         mainMenuButton.anchor.setTo(0.5, 0.5);
         mainMenuButton.inputEnabled = true;
         mainMenuButton.events.onInputDown.add(this.backToMain, this);
-
-        screenieButton = this.game.add.bitmapText(
-                this.game.world.centerX,
-                336,
-                '04b-orange',
-                'Screenie :)',
-                30
-            );
-        screenieButton.anchor.setTo(0.5, 0.5);
-        screenieButton.inputEnabled = true;
-        screenieButton.events.onInputDown.add(this.screenieDo, this);
         
     },
     
@@ -70,18 +59,6 @@ highScore.prototype = {
     
     backToMain: function() {
         this.game.state.start("MainScreen");
-    },
-
-    screenieDo: function(){
-        setTimeout(
-            navigator.screenshot.save(function(error,res){
-              if(error){
-                console.error(error);
-              }else{
-                console.log('ok',res.filePath);
-              }
-            },'jpg'),
-            3000);
     }
     
 }

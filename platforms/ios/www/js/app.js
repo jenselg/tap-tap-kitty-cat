@@ -10,6 +10,7 @@ function initAdMob(){
 }
 
 function allIsGood() {
+
     if(navigator.splashscreen) {
         navigator.splashscreen.hide();
     }
@@ -27,6 +28,17 @@ function allIsGood() {
     }
 
     initAdMob(); 
+
+    var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
+    game.state.add("Boot", boot);
+    game.state.add("Preload", preload);
+    game.state.add("MainScreen", mainScreen);
+    game.state.add("StartGame", startGame);
+    game.state.add("GameOver", gameOver);
+    game.state.add("HighScore", highScore);
+    game.state.add("HowTo", howTo);
+    game.state.start("Boot");    
+
 }
 
 document.addEventListener("deviceready", allIsGood, false) ;

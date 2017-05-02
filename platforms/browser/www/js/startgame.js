@@ -13,9 +13,13 @@ startGame.prototype = {
         var oppX = 0;
         var oppY = 0;
         var clickPoint = 0;
-        jump = this.game.add.audio('jump');
-        hurt = this.game.add.audio('hurt');
-        getcoin = this.game.add.audio('coin');
+
+        if(window.localStorage.getItem('sound') == 'on') {
+            jump = this.game.add.audio('jump');
+            hurt = this.game.add.audio('hurt');
+            getcoin = this.game.add.audio('coin');
+        }
+
         if (AdMob && device.platform != 'browser') {
             this.interstitialAd();
         }
@@ -35,7 +39,7 @@ startGame.prototype = {
             130,
             '04b',
              "" + count,
-            40 
+            50 
         );
         score.anchor.setTo(0.5, 0.5);
  
@@ -64,26 +68,40 @@ startGame.prototype = {
 
         // Enable character physics
         this.game.physics.arcade.enable(cat);
-        cat.body.gravity.y = 500;  
-
+        cat.body.gravity.y = 800;  
+        cat.body.collideWorldBounds = true;
+        cat.body.bounce.set(1.3);
         
     },
     
-    updateScore: function(){
-        jump.play();
+    jump: function(){
+        if(window.localStorage.getItem('sound') == 'on') {
+            jump.play();
+        }
+
+        oppX = this.game.physics.arcade.distanceToPointer(cat)*Math.cos(this.game.physics.arcade.angleToXY(cat, this.game.input.x, this.game.input.y) + Math.PI);
+        oppY = this.game.physics.arcade.distanceToPointer(cat)*Math.sin(this.game.physics.arcade.angleToXY(cat, this.game.input.x, this.game.input.y) + Math.PI);
+        cat.body.velocity.x = oppX*4;
+        cat.body.velocity.y = oppY*4;
+        cat.animations.play('bounce', 10, false);
+
+
         if (count > 0) {
             countTmp = count - 0.1;
             count = Math.round(countTmp *10)/10;
         }
+
         score.setText(count);
     },
     
     update: function(){
         
-        this.game.input.onDown.addOnce(this.updateScore, this);
+        this.game.input.onDown.addOnce(this.jump, this);
 
         if(this.game.physics.arcade.collide(coin, cat)) {
-            getcoin.play();
+            if(window.localStorage.getItem('sound') == 'on') {
+                getcoin.play();
+            }
             count = count + 1;
             score.setText(count);
             coin.kill();
@@ -91,19 +109,11 @@ startGame.prototype = {
         }
         
         if(this.game.physics.arcade.collide(evilCloud, cat) || this.game.physics.arcade.collide(brickSpike, cat)) {
+            if(window.localStorage.getItem('sound') == 'on') {
             hurt.play();
+            }
             this.endGame();
         }
-        
-        if(this.game.input.activePointer.isDown && this.game.input.activePointer.duration < 100) {
-            oppX = this.game.physics.arcade.distanceToPointer(cat)*Math.cos(this.game.physics.arcade.angleToXY(cat, this.game.input.x, this.game.input.y) + Math.PI);
-            oppY = this.game.physics.arcade.distanceToPointer(cat)*Math.sin(this.game.physics.arcade.angleToXY(cat, this.game.input.x, this.game.input.y) + Math.PI);
-            cat.body.velocity.x = oppX*2;
-            cat.body.velocity.y = oppY*4;
-            cat.animations.play('bounce', 10, false);
-        }
-
-        this.game.world.wrap(cat, 0, true);
     
     },
     

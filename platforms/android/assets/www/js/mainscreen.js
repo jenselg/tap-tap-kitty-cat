@@ -56,11 +56,46 @@ mainScreen.prototype = {
         highScoreButton.anchor.setTo(0.5, 0.5);
         highScoreButton.inputEnabled = true;
         highScoreButton.events.onInputDown.add(this.highScore, this);
+
+        if(window.localStorage.getItem('sound') == null) {
+            window.localStorage.setItem('sound', 'on');
+            soundText = "Sound ON";
+        } else if(window.localStorage.getItem('sound') == 'on') {
+            soundText = "Sound ON";
+        } else if(window.localStorage.getItem('sound') == 'off') {
+            soundText = "Sound OFF";
+        } else {
+            soundText = "Error!";
+            console.log(window.localStorage.getItem('sound'));
+        }
+
+        soundButton = this.game.add.bitmapText(
+            this.game.world.centerX,
+            410,
+            '04b',
+            soundText,
+            30
+        );
+        soundButton.anchor.setTo(0.5, 0.5);
+        soundButton.inputEnabled = true;
+        soundButton.events.onInputDown.add(this.soundSwitch, this);
         
     },
+
+    soundSwitch: function() {
+        if(window.localStorage.getItem('sound') == 'on') {
+            window.localStorage.setItem('sound', 'off');
+            soundButton.setText("Sound OFF");
+        } else if (window.localStorage.getItem('sound') == 'off') {
+            window.localStorage.setItem('sound', 'on');
+            soundButton.setText("Sound ON");
+        }
+    },
+
     initGame: function(){
         this.game.state.start("StartGame");
     },
+    
     highScore: function(){
         this.game.state.start("HighScore");
     }

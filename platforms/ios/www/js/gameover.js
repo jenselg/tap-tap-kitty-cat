@@ -44,16 +44,16 @@ gameOver.prototype = {
 
         highScoreCount = this.game.add.bitmapText(
                 this.game.world.centerX,
-                70,
+                90,
                 '04b',
                 window.localStorage.getItem('highscore'),
-                30
+                50
             );
         highScoreCount.anchor.setTo(0.5, 0.5);
         
         currentScore = this.game.add.bitmapText(
                 this.game.world.centerX,
-                110,
+                150,
                 '04b-orange',
                 'Your Score',
                 30
@@ -62,14 +62,14 @@ gameOver.prototype = {
         
         currentScoreCount = this.game.add.bitmapText(
                 this.game.world.centerX,
-                148,
+                210,
                 '04b',
                 "" + count,
-                30
+                50
             );
         currentScoreCount.anchor.setTo(0.5, 0.5);
         
-        if(AdMob && Math.random()*100 < 45 && device.platform != 'browser') {
+        if(AdMob && Math.random()*100 < 10 && device.platform != 'browser') {
             AdMob.showInterstitial();
         }
         

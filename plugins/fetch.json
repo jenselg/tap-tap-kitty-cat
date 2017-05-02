@@ -23,11 +23,18 @@
         "is_top_level": true,
         "variables": {}
     },
-    "com.darktalker.cordova.screenshot": {
+    "cordova-plugin-crosswalk-webview": {
         "source": {
-            "type": "git",
-            "url": "https://github.com/gitawego/cordova-screenshot.git",
-            "subdir": "."
+            "type": "registry",
+            "id": "cordova-plugin-crosswalk-webview@2.3.0"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-splashscreen": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-splashscreen@4.0.3"
         },
         "is_top_level": true,
         "variables": {}

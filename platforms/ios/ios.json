@@ -27,7 +27,7 @@
                             "count": 1
                         },
                         {
-                            "xml": "<feature name=\"Screenshot\"><param name=\"ios-package\" value=\"Screenshot\" /></feature>",
+                            "xml": "<feature name=\"SplashScreen\"><param name=\"ios-package\" value=\"CDVSplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
                         }
                     ]
@@ -42,10 +42,13 @@
         "cordova-plugin-admobpro": {
             "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         },
+        "cordova-plugin-crosswalk-webview": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
         "cordova-plugin-device": {
             "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         },
-        "com.darktalker.cordova.screenshot": {
+        "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         }
     },
@@ -68,18 +71,19 @@
             ]
         },
         {
-            "id": "com.darktalker.cordova.screenshot.screenshot",
-            "file": "plugins/com.darktalker.cordova.screenshot/www/Screenshot.js",
-            "pluginId": "com.darktalker.cordova.screenshot",
-            "merges": [
-                "navigator.screenshot"
+            "id": "cordova-plugin-splashscreen.SplashScreen",
+            "file": "plugins/cordova-plugin-splashscreen/www/splashscreen.js",
+            "pluginId": "cordova-plugin-splashscreen",
+            "clobbers": [
+                "navigator.splashscreen"
             ]
         }
     ],
     "plugin_metadata": {
         "cordova-plugin-extension": "1.5.1",
         "cordova-plugin-admobpro": "2.28.3",
+        "cordova-plugin-crosswalk-webview": "2.3.0",
         "cordova-plugin-device": "1.1.5",
-        "com.darktalker.cordova.screenshot": "0.1.5"
+        "cordova-plugin-splashscreen": "4.0.3"
     }
 }
