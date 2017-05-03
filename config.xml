@@ -9,6 +9,9 @@
     </author>
     <content src="index.html" />
     <access origin="*" />
+    <platform name="android">
+        <icon src="res/icon.png" />
+    </platform>
     <preference name="AutoHideSplashScreen" value="true" />
     <preference name="Orientation" value="portrait" />
     <preference name="SplashScreenDelay" value="0" />
