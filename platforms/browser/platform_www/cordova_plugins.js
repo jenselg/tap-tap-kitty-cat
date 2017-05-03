@@ -43,7 +43,6 @@ module.exports.metadata =
     "cordova-plugin-admobpro": "2.28.3",
     "cordova-plugin-extension": "1.5.1",
     "cordova-plugin-device": "1.1.5",
-    "cordova-plugin-crosswalk-webview": "2.3.0",
     "cordova-plugin-splashscreen": "4.0.3"
 }
 // BOTTOM OF METADATA
