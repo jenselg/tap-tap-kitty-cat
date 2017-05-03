@@ -30,5 +30,23 @@
         },
         "is_top_level": true,
         "variables": {}
+    },
+    "cordova-build-architecture": {
+        "source": {
+            "type": "git",
+            "url": "https://github.com/MBuchalik/cordova-build-architecture.git",
+            "subdir": ".",
+            "ref": "v1.0.1"
+        },
+        "is_top_level": true,
+        "variables": {}
+    },
+    "cordova-plugin-crosswalk-webview": {
+        "source": {
+            "type": "registry",
+            "id": "cordova-plugin-crosswalk-webview@2.3.0"
+        },
+        "is_top_level": true,
+        "variables": {}
     }
 }

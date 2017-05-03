@@ -36,10 +36,16 @@
         }
     },
     "installed_plugins": {
+        "cordova-build-architecture": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
         "cordova-plugin-extension": {
             "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         },
         "cordova-plugin-admobpro": {
+            "PACKAGE_NAME": "io.cybertek.taptapkittycat"
+        },
+        "cordova-plugin-crosswalk-webview": {
             "PACKAGE_NAME": "io.cybertek.taptapkittycat"
         },
         "cordova-plugin-device": {
@@ -77,8 +83,10 @@
         }
     ],
     "plugin_metadata": {
+        "cordova-build-architecture": "1.0.1",
         "cordova-plugin-extension": "1.5.1",
         "cordova-plugin-admobpro": "2.28.3",
+        "cordova-plugin-crosswalk-webview": "2.3.0",
         "cordova-plugin-device": "1.1.5",
         "cordova-plugin-splashscreen": "4.0.3"
     }

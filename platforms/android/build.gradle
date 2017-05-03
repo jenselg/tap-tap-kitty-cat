@@ -88,6 +88,8 @@ ext {
 }
 
 // PLUGIN GRADLE EXTENSIONS START
+apply from: "cordova-build-architecture/taptapkittycat-architecture.gradle"
+apply from: "cordova-plugin-crosswalk-webview/taptapkittycat-xwalk.gradle"
 // PLUGIN GRADLE EXTENSIONS END
 
 def hasBuildExtras = file('build-extras.gradle').exists()
