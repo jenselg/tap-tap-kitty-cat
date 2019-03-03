@@ -5,7 +5,7 @@ function initAdMob(){
             position: AdMob.AD_POSITION.BOTTOM_CENTER,
             autoShow: true
         });
-        
+
     }
 }
 
@@ -17,17 +17,17 @@ function allIsGood() {
 
     if (device.platform == "Android") {
         admobid = {
-            banner: 'ca-app-pub-8133264651158274/9632619748',
-            interstitial: 'ca-app-pub-8133264651158274/3306884540'
+            banner: 'REMOVED',
+            interstitial: 'REMOVED'
         }
     } else if (device.platform == "iOS") {
         admobid = {
-            banner: 'ca-app-pub-8133264651158274/7737084141',
-            interstitial: 'ca-app-pub-8133264651158274/1690550541'
+            banner: 'REMOVED',
+            interstitial: 'REMOVED'
         }
     }
 
-    initAdMob(); 
+    initAdMob();
 
     var game = new Phaser.Game(320, 480, Phaser.CANVAS, "game");
     game.state.add("Boot", boot);
@@ -37,7 +37,7 @@ function allIsGood() {
     game.state.add("GameOver", gameOver);
     game.state.add("HighScore", highScore);
     game.state.add("HowTo", howTo);
-    game.state.start("Boot");    
+    game.state.start("Boot");
 
 }
 

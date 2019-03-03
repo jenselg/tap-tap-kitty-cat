@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="io.cybertek.taptapkittycat" version="1.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="com.jenselg.taptapkittycat" version="1.2.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Tap Tap Kitty Cat</name>
     <description>
         Help the kitty cat collect the coins, while avoiding the dangerous spikes and the evil cloud!
     </description>
-    <author email="support@cybertek.io" href="http://cybertek.io">
-        Cybertek Systems LLC
+    <author email="jensel.gatchalian@gmail.com" href="">
+        Jensel Gatchalian
     </author>
     <content src="index.html" />
     <access origin="*" />
